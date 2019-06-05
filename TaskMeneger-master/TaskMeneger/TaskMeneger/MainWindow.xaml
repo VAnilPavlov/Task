@@ -1,0 +1,45 @@
+﻿<Window x:Class="TaskMeneger.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TaskMeneger"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Grid HorizontalAlignment="Left" Height="162" VerticalAlignment="Top" Width="154" Background="#FF7A7A7A">
+            <Label Content="Дата и время" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="115"/>
+            <TextBox Name="textBoxHour"  HorizontalAlignment="Left" Height="23" Margin="10,104,0,0" TextWrapping="Wrap" Text="Часы" VerticalAlignment="Top" Width="120"/>
+            <TextBox Name="textBoxDay" HorizontalAlignment="Left" Height="23" Margin="10,48,0,0" TextWrapping="Wrap" Text="Дни" VerticalAlignment="Top" Width="120"/>
+            <TextBox Name="textBoxMinute" HorizontalAlignment="Left" Height="23" Margin="10,76,0,0" TextWrapping="Wrap" Text="Минуты" VerticalAlignment="Top" Width="120"/>
+            <ComboBox HorizontalAlignment="Left" Name="typeSelect" Margin="10,132,0,0" VerticalAlignment="Top" Width="120" SelectionChanged="ComboBoxSelectionChanged"/>
+        </Grid>
+
+        <Grid Visibility="Collapsed" Name="gridEmail" HorizontalAlignment="Left" Height="169" Margin="0,162,0,0" VerticalAlignment="Top" Width="154" Background="#FF959595">
+            <TextBox Name="textBoxHeadEmail" HorizontalAlignment="Left" Height="23" Margin="10,26,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="134"/>
+            <TextBox Name="textBoxBodyEmail" HorizontalAlignment="Left" Height="23" Margin="10,75,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="134"/>
+            <Label Content="Заголовок" HorizontalAlignment="Left" VerticalAlignment="Top" Width="134"/>
+            <Label Content="Текст" HorizontalAlignment="Left" Margin="0,49,0,0" VerticalAlignment="Top" Width="134"/>
+            <Button Name="buttonAddEmail" Content="Добавить" HorizontalAlignment="Left" Margin="35,139,0,0" VerticalAlignment="Top" Width="80" Click="ButtonAddEmailClick"/>
+        </Grid>
+        <Grid Visibility="Collapsed" Name="gridDownload" HorizontalAlignment="Left" Height="169" Margin="0,162,0,0" VerticalAlignment="Top" Width="154" Background="#FF959595">
+            <TextBox Name="textBoxDownloadPath" HorizontalAlignment="Left" Height="23" Margin="10,26,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="134"/>
+            <TextBox Name="textBoxDownloadName" HorizontalAlignment="Left" Height="23" Margin="10,75,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="134"/>
+            <Label Content="Имя файла" HorizontalAlignment="Left" Margin="0,49,0,0" VerticalAlignment="Top" Width="134"/>
+            <Label Content="Путь к файлу" HorizontalAlignment="Left" VerticalAlignment="Top" Width="134"/>
+            <Button Name="buttonAddDownload" Content="Добавить" HorizontalAlignment="Left" Margin="35,139,0,0" VerticalAlignment="Top" Width="80" Click="ButtonAddDownloadClick"/>
+        </Grid>
+        <Grid Visibility="Collapsed" Name="gridMaveCatalog" HorizontalAlignment="Left" Height="169" Margin="0,162,0,0" VerticalAlignment="Top" Width="154" Background="#FF959595">
+            <TextBox Name="textBoxMoveCatalogName" HorizontalAlignment="Left" Height="23" Margin="10,24,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="134"/>
+            <TextBox Name="textBoxMoveCatalogPath" HorizontalAlignment="Left" Height="23" Margin="10,73,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="134"/>
+            <Label Content="Имя каталога" HorizontalAlignment="Left" VerticalAlignment="Top" Width="134"/>
+            <Label Content="Путь куда переместить" HorizontalAlignment="Left" Margin="0,47,0,0" VerticalAlignment="Top" Width="144"/>
+            <Button Name="buttonAddCatalog" Content="Добавить" HorizontalAlignment="Left" Margin="35,139,0,0" VerticalAlignment="Top" Width="80" Click="ButtonAddCatalogClick"/>
+        </Grid>
+        <Grid Name="gridClose" HorizontalAlignment="Left" Height="169" Margin="0,162,0,0" VerticalAlignment="Top" Width="154" Background="#FF959595"/>
+        <Button Content="Закрыть с концами" HorizontalAlignment="Left" Margin="0,331,0,0" VerticalAlignment="Top" Width="154" Height="88" Background="#FFFF0505" BorderBrush="Red" Foreground="White" FontSize="17" Click="ButtonClickExit"/>
+
+
+
+    </Grid>
+</Window>
